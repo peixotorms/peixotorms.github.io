@@ -6,15 +6,15 @@
 <style>body { font-family: Arial, Helvetica, sans-serif; } #ua { font-size: 40px; font-weight: bold; color: #FF0000; }</style>
 
 <script>
-	var ua = "User-agent: " + navigator.userAgent;
-	var div = document.getElementById('ua');
-	div.innerHTML += ua;
+document.addEventListener("DOMContentLoaded", function(){
+	document.getElementById("ua").innerHTML = navigator.userAgent;
+});
 </script>
 
 </head>
 <body>
 
-<div id="ua"></div>
+<div id="ua">...</div>
 
 <body>
 </html>
