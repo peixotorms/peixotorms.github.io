@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PSI JavaScript UA Test</title>
+<style>body { font-family: Arial, Helvetica, sans-serif; } #ua { font-size: 40px; font-weight: bold; color: #FF0000; }</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	document.getElementById("ua").innerHTML = "UA 1: " . navigator.userAgent;
+});
+</script>
+
+</head>
+<body>
+
+<div id="ua">...</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	document.getElementById("ua2").innerHTML = "UA 2: " . navigator.userAgent;
+});
+</script>
+
+<div id="ua2">...</div>
+<body>
+</html>
