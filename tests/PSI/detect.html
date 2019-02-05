@@ -9,6 +9,7 @@ function fvmuag() {
 	
 	// false if no PSI
 	if(navigator.userAgent.match(/nux.*oto\sG|x11.*fox\/54|x11.*ome\/39|x11.*ome\/62|oid\s6.*1.*xus\s5.*MRA58N.*ome|JWR66Y.*ome\/62|woobot|speed|ighth|tmetr|eadles/i)){
+		console.log('Found 1');
 		return false;
 	}
 	
@@ -17,11 +18,13 @@ function fvmuag() {
 		var tz = new Date().getTimezoneOffset();
 		var hc = navigator.hardwareConcurrency;
 		if(isNaN(tz) && isNaN(hc) && hc > 24 && tz == 480){
+			console.log('Found 2');
 			return false;
 		}
 	}
 	
 	// fallback
+	console.log('Fallback');
 	return true;
 	
 }
