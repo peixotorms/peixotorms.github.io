@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PSI JavaScript UA Test</title>
+<script>
+// check if should exclude or not
+function fvmuag() {
+	
+	// false if no PSI
+	if(navigator.userAgent.match(/nux.*oto\sG|x11.*fox\/54|x11.*ome\/39|x11.*ome\/62|oid\s6.*1.*xus\s5.*MRA58N.*ome|JWR66Y.*ome\/62|woobot|speed|ighth|tmetr|eadles/i)){
+		return false;
+	}
+	
+	// Consider PSI Desktop
+	if(navigator.userAgent.match(/lla.*acint.*10_12_6.*ome\/71/i)){
+		var tz = new Date().getTimezoneOffset();
+		var hc = navigator.hardwareConcurrency;
+		if(isNaN(tz) && isNaN(hc) && hc > 24 && tz == 480){
+			return false;
+		}
+	}
+	
+	// fallback
+	return true;
+	
+}
+</script>
+<style>
+body { font-family: Arial, Helvetica, sans-serif; line-height: 38px; } 
+#content { font-size: 28px; font-weight: bold; color: #FF0000; } 
+</style>
+
+</head>
+<body>
+----
+<div id="content">
+<script>
+if(fvmuag()) { document.write('true: Normal Browser'); } else { document.write('false: PSI Found'); }
+</script>
+----
+</div>
+<body>
+</html>
