@@ -3,7 +3,23 @@
 <head>
 <meta charset="utf-8">
 <title>PSI JavaScript UA Test</title>
-<script>function fvmuag(){if(navigator.userAgent.match(/nux.*oto\sG|x11.*fox\/54|x11.*ome\/39|x11.*ome\/62|oid\s6.*1.*xus\s5.*MRA58N.*ome|JWR66Y.*ome\/62|woobot|speed|ighth|tmetr|eadles/i))return!1;if(navigator.userAgent.match(/lla.*acint.*10_12_6.*ome\/71/i)){var e=screen.width,t=navigator.hardwareConcurrency;if("number"==typeof e&&"number"==typeof t&&t>24&&800==e)return!1}return!0};</script>
+<script>
+if ("function" != typeof pseuag)
+function pseuag() {
+    if (navigator.userAgent.match(/x11.*fox\/54|oid\s4.*xus.*ome\/62|oobot|ighth|tmetr|eadles|ingdo/i)) return !1;
+    if (navigator.userAgent.match(/x11.*ome\/75\.0\.3770\.100/i)) {
+        var e = screen.width,
+            t = screen.height;
+        if ("number" == typeof e && "number" == typeof t && 862 == t && 1367 == e) return !1
+    }
+    if (navigator.userAgent.match(/x11.*PTST/i)) {
+        var e = screen.width,
+            t = screen.height,
+            z = new Date().getTimezoneOffset();
+        if ("number" == typeof e && "number" == typeof t && "number" == typeof z && 1200 == t && 1920 == e && 0 == z) return !1
+    }
+    return !0
+}</script>
 <style>
 body { font-family: Arial, Helvetica, sans-serif; line-height: 38px; } 
 #content { font-size: 28px; font-weight: bold; color: #FF0000; } 
@@ -14,7 +30,7 @@ body { font-family: Arial, Helvetica, sans-serif; line-height: 38px; }
 ----
 <div id="content">
 <script>
-if(fvmuag()) { document.write('True: Normal ' + navigator.userAgent); } else { document.write('False: PSI ' + navigator.userAgent); }
+if(pseuag()) { document.write('True: Normal ' + navigator.userAgent); } else { document.write('False: PSI ' + navigator.userAgent); }
 </script>
 </div>
 ----
